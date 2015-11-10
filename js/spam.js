@@ -614,6 +614,9 @@ function NBIModel()
 
         // set the constant for dynamical friction
         lnl = 0.00;
+       
+        // set ln(Lambda) to match value used in Galaxy Zoo: Mergers 
+        lnl = 0.001;
 
         // set up the parameters for the halo
         mhalo = 5.8;
