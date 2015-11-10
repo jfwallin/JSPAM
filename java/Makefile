@@ -12,16 +12,16 @@ RM = /bin/rm -rf
 	$(JC) $(JFLAGS) -sourcepath $(SDIR) -classpath $(CP) -d $(CDIR) $*.java
 
 CLASSES = \
+	Parameters.java \
 	IOUtil.java \
 	Constants.java \
-	Parameters.java \
 	ForceModel.java \
 	SPMModel.java \
 	NBIModel.java \
 	MONDModel.java \
 	Integrator.java \
-	SetupUtil.java \
 	MathUtil.java \
+	SetupUtil.java \
 	QuaternionRotator.java \
 	RotationController.java \
 	ScatterPanel.java \
