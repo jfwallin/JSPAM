@@ -1,0 +1,72 @@
+<!--
+From Ant Tutorial
+http://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html
+-->
+<project name="jspamarchive" basedir="." default="jar">
+
+  <property name="src.dir"   value="./src"/>
+
+  <property name="build.dir"   value="build"/>
+  <property name="output.dir"   value="output"/>
+  <property name="classes.dir" value="${build.dir}/classes"/>
+  <property name="jar.dir"   value="${build.dir}/jar"/>
+
+  <property name="main-class"  value="edu.gmu.cds.sim.Run"/>
+  <property name="lib.dir"     value="lib"/>
+  <property name="data.dir"     value="data"/>
+
+  <path id="classpath">
+  	<dirset dir="${classes.dir}" />
+  </path>
+
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+    <delete dir="${output.dir}"/>
+  </target>
+
+  <target name="compile">
+    <mkdir dir="${classes.dir}"/>
+<!--
+    <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" target="1.4" source="1.4" debug="true" />
+-->
+    <javac srcdir="${src.dir}" destdir="${classes.dir}" target="1.4" source="1.4" debug="true" />
+  </target>
+
+  <target name="jar" depends="compile">
+	<mkdir dir="${jar.dir}"/>
+  	<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}" 
+         compress="true" duplicate="preserve">
+      <manifest>
+        <attribute name="Main-Class" value="${main-class}"/>
+      </manifest>
+      <fileset dir="." includes="${data.dir}/**,images/**"/>
+    </jar>
+  </target>
+
+  <target name="run" depends="jar">
+    <java jar="${jar.dir}/${ant.project.name}.jar" fork="true">
+      <classpath>
+        <path refid="classpath"/>
+        <path location="${jar.dir}/${ant.project.name}.jar"/>
+      </classpath>
+    </java>
+  </target>
+
+  <target name="docs">
+	  <javadoc packagenames="edu.*"
+	           sourcepath="src"
+	           defaultexcludes="yes"
+	           destdir="docs/api"
+	           author="true"
+	           version="true"
+	           use="true"
+	           windowtitle="JSPAMGA API">
+      </javadoc>
+  </target>
+  	
+  <target name="clean-build" depends="clean,jar"/>
+
+  <target name="main" depends="clean,run"/>
+
+</project>
+
