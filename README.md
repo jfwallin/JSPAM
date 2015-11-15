@@ -11,6 +11,9 @@ The current language implementations include:
 2. Java
 3. JavaScript
 
+Citations
+---------
+Please cite the Astrophysics Source Code Library (ASCL) entry for JSPAM, [http://ascl.net/1511.002](http://ascl.net/1511.002).  The ASCL is also indexed by the Astrophysics Data System (ADS), see the entry for [JSPAM](http://adsabs.harvard.edu/abs/2015ascl.soft11002W).
 
 LICENSE
 -------
