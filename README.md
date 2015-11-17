@@ -13,7 +13,9 @@ The current language implementations include:
 
 Citations
 ---------
-Please cite the Astrophysics Source Code Library (ASCL) entry for JSPAM, [http://ascl.net/1511.002](http://ascl.net/1511.002).  The ASCL is also indexed by the Astrophysics Data System (ADS), see the entry for [JSPAM](http://adsabs.harvard.edu/abs/2015ascl.soft11002W).
+Please cite the Astrophysics Source Code Library (ASCL) entry for JSPAM, [http://ascl.net/1511.002](http://ascl.net/1511.002). The ASCL is also indexed by the Astrophysics Data System (ADS), see the entry for [JSPAM](http://adsabs.harvard.edu/abs/2015ascl.soft11002W).
+
+The pre-print of our code release paper is available on [arxiv](http://arxiv.org/abs/1511.05041).  We will update the citation guidance once it has been fully accepted.
 
 LICENSE
 -------
