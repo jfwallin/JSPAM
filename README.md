@@ -3,7 +3,7 @@ JSPAM
 
 Software for simulating interacting galaxies using a restricted three-body approximation.
 
-The current version of the code is available in the various language sub directories.  A portion of the historic version of the code is available in the archive directory.
+The current version of the code is available in the various language sub directories.  A portion of the historic version of the code is available in the archive directory.  The archive directory includes instructions for running a script that will recreate all 62 best-fit models from the Galaxy Zoo: Mergers file.  The js directory contains a web page that can run the same models in your browser.
 
 The current language implementations include:
 
